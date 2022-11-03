@@ -2,12 +2,24 @@
   --primary-color: #232c63;
   --secondary-color: #959ed3;
   --base-size: 16px;
-  --header-footer-size: 48px;
+  --header-footer-size: 36px;
 }
 
 * {
   box-sizing: border-box;
 }
+
+a {
+  color: none;
+  text-decoration: none;
+  }
+
+a:visited {
+  color: none;
+  text-decoration: none;
+}
+
+
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -20,18 +32,28 @@ body {
   margin: 0;
 }
 
+fieldset {
+  width: auto;
+}
+
 h1 {
   color: #ffffff;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
+  padding: var(--base-size);
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
   text-transform: capitalize;
   text-align: center;
   font-size: 1.5rem;
+}
+
+input {
+  
 }
 
 .layout {
@@ -41,41 +63,43 @@ h3 {
 }
 
 .layout.footer {
-  grid-area: footer;  
+  grid-area: footer;
+}
+
+.layout.footer img {
+  display: none;
 }
 
 .layout.footer,
-.layout.header {  
+.layout.header {
   background-color: var(--primary-color);
   display: flex;
   height: auto;
-  max-height: 250px;
+  max-height: 150px;
   padding: var(--header-footer-size);
   width: 100%;
 }
 
 .layout.header.left {
-  align-content: center;
+  align-items: center;
   display: flex;
   grid-area: header-left;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .layout.header.mid {
-  align-content: center;
+  align-items: center;
   display: flex;
   grid-area: header-mid;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .layout.header.right {
   grid-area: header-right;
 }
 
-.layout.header.left img,
-.layout.header.mid img {
-  height: 100%;
-  max-height: 150px;
+.layout.header.left img {
+  max-height: 180px;
   padding: var(--base-size);
   width: auto;
 }
@@ -90,11 +114,11 @@ h3 {
 }
 
 .layout.sidebar-left {
-  grid-area: left-sidebar; 
+  grid-area: left-sidebar;
 }
 
-.layout.sidebar-right {  
-  grid-area: right-sidebar;  
+.layout.sidebar-right {
+  grid-area: right-sidebar;
 }
 
 .layout.sidebar-right img {
@@ -112,18 +136,9 @@ h3 {
   padding: var(--base-size);
 }
 
-.logo {
-  position: relative;
-}
-
-.logotype {
-  justify-self: center;
-  position: relative;
-}
-
-.main-content {  
-  width: 75%;
+.main-content {
   padding: var(--base-size);
+  width: 75%;
 }
 
 .menu-bar {
@@ -131,6 +146,7 @@ h3 {
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px black solid;
+  color: #000000;
   display: flex;
   font-size: 1.5rem;
   font-weight: bold;
@@ -138,27 +154,51 @@ h3 {
   justify-content: center;
   margin: 5%;
   padding: calc(var(--base-size) / 2);
-  width: 100%;  
+  width: 100%;
 }
 
 .menu-bar.active-page {
   background-color: #232c63;
   color: #ffffff;
 }
- 
-.menu-bar:hover {
+
+.menu-bar:hover,
+button:hover {
   background-color: var(--primary-color);
   color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    --primary-color: #232c63;
-    --secondary-color: #959ed3;
     --base-size: 8px;
     --header-footer-size: 16px;
   }
 
+  .layout.footer {
+    justify-content: center;
+  }
+
+  .layout.footer img {
+    display: flex;
+    flex-direction: wrap;
+    height: auto;
+    justify-content: space-between;
+    padding: var(--base-size);
+    width: 30%;
+  }
+
+  .layout.main {
+    justify-content: flex-start;
+  }
+
+  .layout.sidebar-left,
+  .layout.header.left {
+    flex: 1 1 auto;
+  }
+
+  .layout.sidebar-right {
+    background-color: #ffffff;
+  }
 
   .layout.sidebar-right img {
     display: none;
@@ -168,5 +208,7 @@ h3 {
     font-size: 8px;
   }
 
+/* gör sponsorbilderna osynliga i footern tills 768px, och få de att synas efter det. Gör right sidbar width=0
+sen gör de osynliga i right sidebar */
 
 }

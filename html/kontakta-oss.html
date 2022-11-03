@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<title>Uppsala FDK</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout header left">
+      <img src="../pics/ufdk-logo.png" alt="ufdk" height="200px" width="auto">
+    </div>
+    <div class="layout header mid">
+      <div>
+        <h1>Uppsala <br> Frisbee</h1>
+      </div>
+    </div>
+    <div class="layout header right"></div>
+
+    <div class="layout sidebar-left">
+      <a class="menu-bar" href="index.html">Hem</a>
+      <a class="menu-bar" href="bli-medlem.html">Bli medlem</a>
+      <a class="menu-bar" href="discgolf.html">Discgolf</a>
+      <a class="menu-bar" href="ultimate.html">Ultimate</a>
+      <a class="menu-bar" href="foretagsevent.html">Företagsevent</a>
+      <a class="menu-bar" href="om-oss.html">Om oss</a>
+      <a class="menu-bar" href="kontakta-oss.html">Kontakta oss</a>
+    </div>
+
+    <div class="layout sidebar-right">
+      <img class="logo" src="../pics/discsport.png" alt="discsport" height="200px" width="auto">
+      <img class="logo" src="../pics/fyrishov.png" alt="fyrishov" height="200px" width="auto">
+      <img class="logo" src="../pics/force-fyris.png" alt="force-fyris" height="200px" width="auto">
+    </div>
+
+    <div class="layout main">
+      <div class="main-content">
+        <h3>Kontakta oss</h3>
+        <form>
+          <fieldset>
+            <legend>Skicka mail till oss:</legend>
+            <label for="name">För- och efternamn*</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="subject">Ämne*</label><br>
+
+            <input type="radio" id="medlemskap" name="subject" required>
+            <label for="medlemskap">Medlemskap</label><br>
+
+            <input type="radio" id="foretagsevent" name="subject" required>
+            <label for="företagsevent">Företagsevent</label><br>
+
+            <input type="radio" id="bangruppen" name="subject" required>
+            <label for="bangruppen">Bangruppen</label><br>
+
+            <input type="radio" id="ovrigt" name="subject" value="ovrigt" required>
+            <label for="ovrigt">Övrigt</label><br>
+
+            <label for="meddelande">Meddelande*</label><br>
+            <textarea name="meddelande" style="width:300px; height:200px;" required></textarea>
+            <p>*=Obligatoriskt</p>
+
+          </fieldset>
+          <button>Skicka</button>
+        </form>
+      </div>
+    </div>
+    <div class="layout footer">
+      <img class="logo" src="../pics/discsport.png" alt="discsport" height="200px" width="auto">
+      <img class="logo" src="../pics/fyrishov.png" alt="fyrishov" height="200px" width="auto">
+      <img class="logo" src="../pics/force-fyris.png" alt="force-fyris" height="200px" width="auto">
+    </div>
+  </div>
+</body>
+
+</html>
