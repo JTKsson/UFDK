@@ -30,11 +30,6 @@ body {
   margin: 0;
 }
 
-fieldset {
-  padding: var(--base-size);
-  width: fit-content;
-}
-
 h1 {
   color: #ffffff;
   font-family: 'Times New Roman', Times, serif;
@@ -49,10 +44,6 @@ h3 {
   text-transform: capitalize;
   text-align: center;
   font-size: 1.5rem;
-}
-
-input {
-  
 }
 
 .layout {
@@ -174,11 +165,16 @@ button:hover {
     --header-footer-size: 16px;
   }
 
-  fieldset {
-    max-width: 100px;
+  body {
+    max-width: 768px;
   }
 
   .layout.header.left {
+    max-width: 100px;
+  }
+
+  .layout.header.left img {
+    height: auto;
     max-width: 100px;
   }
 
@@ -187,16 +183,17 @@ button:hover {
   }
 
   .layout.footer img {
+    box-sizing: content-box;
     display: flex;
     flex-direction: wrap;
-    height: auto;
+    height: fit-content;
     justify-content: space-between;
     padding: var(--base-size);
-    width: 30%;
+    width: 25%;
   }
 
   .layout.main-content {
-    align-content: flex-start;
+    display: flex;
   }
 
   .layout.sidebar-left {
@@ -216,11 +213,15 @@ button:hover {
     display: none;
   }
 
+  .menu-bar {
+    width: 100%;
+  }
+
   html {
     font-size: 8px;
   }
 
-/* gör sponsorbilderna osynliga i footern tills 768px, och få de att synas efter det. Gör right sidbar width=0
+  /* gör sponsorbilderna osynliga i footern tills 768px, och få de att synas efter det. Gör right sidbar width=0
 sen gör de osynliga i right sidebar */
 
 }
